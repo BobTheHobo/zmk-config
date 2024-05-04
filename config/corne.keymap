@@ -29,9 +29,9 @@
 
         mediaandmouse {
             bindings = <
-  &trans  &trans    &trans    &trans     &trans     &trans      &trans      &trans             &trans           &trans  &trans
-  &trans  &mkp MB3  &mkp MB4  &mkp RCLK  &mkp LCLK  &mkp MB5    &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans
-  &trans  &trans    &trans    &trans     &trans     &trans      &trans      &trans             &trans           &trans  &trans
+  &trans  &trans    &trans    &trans     &trans     &trans      &trans      &trans             &trans           &trans  &trans  &trans
+  &trans  &mkp MB3  &mkp MB4  &mkp RCLK  &mkp LCLK  &mkp MB5    &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans  &trans
+  &trans  &trans    &trans    &trans     &trans     &trans      &trans      &trans             &trans           &trans  &trans  &trans
                       &trans     &to 0      &trans      &trans      &to 0              &trans
             >;
         };
