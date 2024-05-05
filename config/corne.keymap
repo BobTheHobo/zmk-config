@@ -10,23 +10,29 @@
 
 / {
 	behaviors {
-        td_cb: tap_dance_ctrl_backspace {
+        td_cb: tap_dance_backspace_ctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LEFT_CONTROL>, <&kp BACKSPACE>;
+            bindings = <&mt LBACKSPACE LEFT_CONTROL>, <&kp ESCAPE>;
         };
         td_sec: tap_dance_shift_enter_capslock {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RIGHT_SHIFT>, <&kp ENTER>, <&kp CAPSLOCK>;
+            bindings = <&mt ENTER RIGHT_SHIFT>, <&kp CAPSLOCK>;
         };
 		td_qq: tap_dance_q_esc {
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
 			bindings = <&kp Q>, <&kp ESCAPE>;
+		};
+		td_quote: tap_dance_colon_quote {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&kp ;>, <&kp SQT>;
 		};
     };
 
