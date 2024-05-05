@@ -14,13 +14,13 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt BACKSPACE LEFT_CONTROL>, <&kp ESCAPE>;
+            bindings = <&mt LEFT_CONTROL BACKSPACE>, <&kp ESCAPE>;
         };
         td_sec: tap_dance_shift_enter_capslock {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt ENTER RIGHT_SHIFT>, <&kp CAPSLOCK>;
+            bindings = <&mt RIGHT_SHIFT ENTER>, <&kp CAPSLOCK>;
         };
 		td_qq: tap_dance_q_esc {
 			compatible = "zmk,behavior-tap-dance";
@@ -31,7 +31,7 @@
 		td_quote: tap_dance_colon_quote {
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
-			tapping-term-ms = <200>;
+			tapping-term-ms = <150>;
 			bindings = <&kp SEMICOLON>, <&kp SQT>;
 		};
     };
