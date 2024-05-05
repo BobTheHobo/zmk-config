@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LBACKSPACE LEFT_CONTROL>, <&kp ESCAPE>;
+            bindings = <&mt BACKSPACE LEFT_CONTROL>, <&kp ESCAPE>;
         };
         td_sec: tap_dance_shift_enter_capslock {
             compatible = "zmk,behavior-tap-dance";
