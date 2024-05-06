@@ -31,7 +31,7 @@
 		td_quote: tap_dance_colon_quote {
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
-			tapping-term-ms = <150>;
+			tapping-term-ms = <200>;
 			bindings = <&kp SEMICOLON>, <&kp SQT>;
 		};
     };
