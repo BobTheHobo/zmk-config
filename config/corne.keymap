@@ -39,7 +39,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-		shft_entr: tap_enter_hold_shift {
+        shft_entr: tap_enter_hold_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -47,7 +47,7 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
-		};
+        };
 
         // Tapdance
 
@@ -99,10 +99,10 @@
 
         default_windows {
             bindings = <
-&trans  &td_qq  &kp W  &kp E   &kp R      &kp T                        &kp Y    &kp U  &kp I                 &kp O    &td_quote  &trans
-&trans  &kp A   &kp S  &kp D   &kp F      &kp G                        &kp H    &kp J  &kp K                 &kp L    &kp P      &trans
-&trans  &kp Z   &kp X  &kp C   &kp V      &kp B                        &kp N    &kp M  &com_wind LWIN COMMA  &kp DOT  &kp FSLH   &trans
-                       &trans  &kp SPACE  &bsp_ctrl LCTRL BACKSPACE    &td_sec  &to 3  &trans
+&trans  &td_qq  &kp W  &kp E    &kp R      &kp T                        &kp Y    &kp U  &kp I                 &kp O    &td_quote  &trans
+&trans  &kp A   &kp S  &kp D    &kp F      &kp G                        &kp H    &kp J  &kp K                 &kp L    &kp P      &trans
+&trans  &kp Z   &kp X  &kp C    &kp V      &kp B                        &kp N    &kp M  &com_wind LWIN COMMA  &kp DOT  &kp FSLH   &trans
+                       &kp TAB  &kp SPACE  &bsp_ctrl LCTRL BACKSPACE    &td_sec  &to 3  &kp RIGHT_ALT
             >;
         };
 
