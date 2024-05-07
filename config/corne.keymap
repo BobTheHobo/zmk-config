@@ -11,8 +11,8 @@
 #include <dt-bindings/zmk/mouse.h>
 
 &mmv {
-    time-to-max-speed-ms = <680>;
-    acceleration-exponent = <2>;
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <0>;
 };
 
 / {
@@ -29,7 +29,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        com_wind: top_comma_hold_windows {
+        com_wind: tap_comma_hold_windows {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -38,6 +38,16 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
+
+		shft_entr: tap_enter_hold_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+		};
 
         // Tapdance
 
@@ -52,7 +62,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt RIGHT_SHIFT ENTER>, <&kp CAPSLOCK>;
+            bindings = <&shft_entr LSHIFT ENTER>, <&kp CAPSLOCK>;
         };
 
         td_qq: tap_dance_q_esc {
