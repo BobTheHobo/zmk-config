@@ -105,8 +105,8 @@
         media_mouse {
             bindings = <
 &trans  &mkp MB4         &mkp RCLK          &mmv MOVE_UP    &mkp LCLK           &mkp MB5            &kp C_PLAY_PAUSE  &kp C_PREV            &kp C_NEXT            &trans  &trans  &trans
-&trans  &trans           &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT     &mwh SCROLL_UP      &kp C_MUTE        &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &trans  &trans  &trans
-&trans  &mwh SCROLL_LEFT &mwh SCROLL_RIGHT  &trans          &mkp MB3            &mwh SCROLL_DOWN      &kp LG(P)         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans
+&trans  &trans           &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT     &msc SCROLL_UP      &kp C_MUTE        &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &trans  &trans  &trans
+&trans  &msc SCROLL_LEFT &msc SCROLL_RIGHT  &trans          &mkp MB3            &msc SCROLL_DOWN      &kp LG(P)         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans
                              &trans  &to 0      &trans      &trans            &to 0                 &trans
             >;
         };
