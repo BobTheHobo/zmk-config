@@ -10,6 +10,7 @@
 
 / {
 	behaviors {
+		// Hold tap
 		bsp_ctrl: tap_backspace_hold_ctrl {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
@@ -19,6 +20,17 @@
 			require-prior-idle-ms = <125>;
 			bindings = <&kp>, <&kp>;
 		};
+		com_wind: top_comma_hold_windows {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			tapping-term-ms = <200>;
+			quick-tap-ms = <200>;
+			require-prior-idle-ms = <125>;
+			bindings = <&kp>, <&kp>;
+		};
+
+		// Tapdance
         td_cb: tap_dance_backspace_ctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -58,7 +70,7 @@
 	 &trans      &kp A      &kp S       &kp D      &kp F      &kp G                &kp H      &kp J      &kp K       &kp L     &kp P          &trans
 //             -------------------------------------------------------          --------------------------------------------------------
 //            |    Z     |    X     |    C     |     V    |     B    |          |    N     |    M     |    ,     |     .    |    /     |         
-	 &trans      &kp Z      &kp X       &kp C      &kp V      &kp B				   &kp N	  &kp M    &kp COMMA    &kp DOT   &kp FSLH        &trans
+	 &trans      &kp Z      &kp X       &kp C      &kp V      &kp B				   &kp N	  &kp M    &com_wind    &kp DOT   &kp FSLH        &trans
 //             -------------------------------------------------------          --------------------------------------------------------
 //                            |     TAB    |    SPACE   | Ctrl/Bkspc |          | Shift/Enter/Capslock |   Layer 3    |    ALT     |                           
                                   &kp TAB    &kp SPACE   &bsp_ctrl LCTRL BSPC           &td_sec             &to 3       &kp RALT
