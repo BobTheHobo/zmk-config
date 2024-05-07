@@ -11,8 +11,8 @@
 #include <dt-bindings/zmk/mouse.h>
 
 &mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <0>;
+    time-to-max-speed-ms = <250>;
+    acceleration-exponent = <1>;
 };
 
 / {
@@ -27,6 +27,7 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
+			retro-tap;
         };
 
         com_wind: tap_comma_hold_windows {
@@ -42,11 +43,10 @@
 		shft_entr: tap_enter_hold_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-unless-interrupted";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
+			retro-tap; // Triggers tap when releasing hold-tap key and no other key pressed
 		};
 
         // Tapdance
