@@ -27,7 +27,7 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
-			retro-tap;
+			retro-tap; // Triggers tap when releasing hold-tap key and no other key pressed
         };
 
         com_wind: tap_comma_hold_windows {
@@ -43,10 +43,9 @@
         shft_entr: tap_enter_hold_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
-			retro-tap; // Triggers tap when releasing hold-tap key and no other key pressed
 		};
 
         // Tapdance
@@ -68,7 +67,7 @@
         td_qq: tap_dance_q_esc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp Q>, <&kp ESCAPE>;
         };
 
