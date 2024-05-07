@@ -9,52 +9,58 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
-	behaviors {
-		// Hold tap
-		bsp_ctrl: tap_backspace_hold_ctrl {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-preferred";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <200>;
-			require-prior-idle-ms = <125>;
-			bindings = <&kp>, <&kp>;
-		};
-		com_wind: top_comma_hold_windows {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "balanced";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <200>;
-			require-prior-idle-ms = <125>;
-			bindings = <&kp>, <&kp>;
-		};
+    behaviors {
+        // Hold tap
 
-		// Tapdance
+        bsp_ctrl: tap_backspace_hold_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        com_wind: top_comma_hold_windows {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        // Tapdance
+
         td_cb: tap_dance_backspace_ctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mt LEFT_CONTROL BACKSPACE>, <&kp ESCAPE>;
         };
+
         td_sec: tap_dance_shift_enter_capslock {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mt RIGHT_SHIFT ENTER>, <&kp CAPSLOCK>;
         };
-		td_qq: tap_dance_q_esc {
-			compatible = "zmk,behavior-tap-dance";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp Q>, <&kp ESCAPE>;
-		};
-		td_quote: tap_dance_colon_quote {
-			compatible = "zmk,behavior-tap-dance";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp SEMICOLON>, <&kp SQT>;
-		};
+
+        td_qq: tap_dance_q_esc {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Q>, <&kp ESCAPE>;
+        };
+
+        td_quote: tap_dance_colon_quote {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SEMICOLON>, <&kp SQT>;
+        };
     };
 
     keymap {
@@ -62,28 +68,19 @@
 
         default_windows {
             bindings = <
-//             -------------------------------------------------------          --------------------------------------------------------                                                        
-//            |  Q, ESC  |   W      |     E    |    R     |    T     |          |    Y     |    U     |     I    |     O    |  ;: '"   |                   
-	 &trans      &td_qq     &kp W       &kp E      &kp R      &kp T			       &kp Y      &kp U	     &kp I       &kp O    &td_quote		&trans
-//             -------------------------------------------------------          --------------------------------------------------------
-//            |    A     |    S     |    D     |     F    |     G    |          |    H     |    J     |    K     |    L     |    P     |         
-	 &trans      &kp A      &kp S       &kp D      &kp F      &kp G                &kp H      &kp J      &kp K       &kp L     &kp P          &trans
-//             -------------------------------------------------------          --------------------------------------------------------
-//            |    Z     |    X     |    C     |     V    |     B    |          |    N     |    M     |    ,     |     .    |    /     |         
-	 &trans      &kp Z      &kp X       &kp C      &kp V      &kp B				   &kp N	  &kp M    &com_wind COMMA LWIN    &kp DOT   &kp FSLH        &trans
-//             -------------------------------------------------------          --------------------------------------------------------
-//                            |     TAB    |    SPACE   | Ctrl/Bkspc |          | Shift/Enter/Capslock |   Layer 3    |    ALT     |                           
-                                  &kp TAB    &kp SPACE   &bsp_ctrl LCTRL BSPC           &td_sec             &to 3       &kp RALT
-//                            ----------------------------------------          -----------------------------------------                                                                          
+&trans  &td_qq  &kp W  &kp E   &kp R      &kp T     &kp Y    &kp U  &kp I                 &kp O    &td_quote  &trans
+&trans  &kp A   &kp S  &kp D   &kp F      &kp G     &kp H    &kp J  &kp K                 &kp L    &kp P      &trans
+&trans  &kp Z   &kp X  &kp C   &kp V      &kp B     &kp N    &kp M  &com_wind COMMA LWIN  &kp DOT  &kp FSLH   &trans
+                       &trans  &kp SPACE  &trans    &td_sec  &to 3  &trans
             >;
         };
 
         media_mouse {
             bindings = <
-  &trans  &trans    &trans    &trans     &trans     &trans      &trans      &trans             &trans           &trans  &trans  &trans
-  &trans  &mkp MB3  &mkp MB4  &mkp RCLK  &mkp LCLK  &mkp MB5    &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans  &trans
-  &trans  &trans    &trans    &trans     &trans     &trans      &trans      &trans             &trans           &trans  &trans  &trans
-                      &trans     &to 0      &trans      &trans      &to 0              &trans
+&trans  &trans    &trans    &trans     &trans     &trans      &trans      &trans             &trans           &trans  &trans  &trans
+&trans  &mkp MB3  &mkp MB4  &mkp RCLK  &mkp LCLK  &mkp MB5    &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans     &trans      &trans      &trans             &trans           &trans  &trans  &trans
+                            &trans     &to 0      &trans      &trans      &to 0              &trans
             >;
         };
 
@@ -95,9 +92,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5           &kp F6        &kp F7    &kp F8        &kp F9     &kp F10  &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5           &kp NUMBER_6  &kp N7    &kp N8        &kp N9     &kp N0   &trans
-&trans  &kp F11       &kp F12       &trans        &kp INS       &kp DELETE       &trans       &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5           &kp F6        &kp F7    &kp F8    &kp F9        &kp F10    &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5           &kp NUMBER_6  &kp N7    &kp N8    &kp N9        &kp N0     &trans
+&trans  &kp F11       &kp F12       &trans        &kp INS       &kp DELETE       &trans        &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
                                     &kp LGUI      &to 0         &kp BACKSPACE    &kp RET       &to 1     &kp RALT
             >;
         };
@@ -110,10 +107,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &kp CARET  &kp AMPS   &kp ASTRK     &kp LPAR  &kp RPAR  &trans
-&trans  &kp GRAVE  &trans  &trans    &trans    &trans           &kp MINUS  &kp EQUAL  &kp LBKT      &kp RBKT  &kp BSLH  &trans
-&trans  &trans     &trans  &trans    &trans    &to 1            &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &trans
-                           &kp LGUI  &to 0     &kp BACKSPACE    &kp RET    &to 2      &kp CAPSLOCK
+&trans  &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&trans  &kp GRAVE  &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &trans
+&trans  &trans     &trans  &trans    &trans    &to 1        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
+                           &trans    &to 0     &trans       &trans     &to 2      &trans
             >;
         };
     };
