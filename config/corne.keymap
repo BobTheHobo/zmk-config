@@ -27,7 +27,8 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
-			retro-tap; // Triggers tap when releasing hold-tap key and no other key pressed
+
+            retro-tap; // Triggers tap when releasing hold-tap key and no other key pressed
         };
 
         com_wind: tap_comma_hold_windows {
@@ -46,7 +47,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
-		};
+        };
 
         // Tapdance
 
@@ -116,10 +117,10 @@
 
         numbers_nav {
             bindings = <
-&trans  &td_f11       &td_f12        &kp F3        &kp F4        &kp F5        &kp F6        &kp F7    &kp F8    &kp F9        &kp F10    &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N7    &kp N8    &kp N9        &kp N0     &trans
-&trans  &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &kp DELETE    &kp INS       &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
-                                     &trans        &to 0         &trans        &trans        &to 1     &trans
+&trans  &td_f11       &td_f12       &kp F3         &kp F4        &kp F5     &kp F6        &kp F7    &kp F8        &kp F9     &kp F10     &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5     &kp NUMBER_6  &kp N7    &kp N8        &kp N9     &kp N0      &trans
+&trans  &kp DELETE    &kp HOME      &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp INSERT  &trans
+                                    &trans         &to 0         &trans     &trans        &to 1     &trans
             >;
         };
 
