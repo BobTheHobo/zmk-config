@@ -15,8 +15,8 @@
 #define MO_TO(layer) &mo_to layer layer
 
 &mmv {
-    time-to-max-speed-ms = <300>;
-    acceleration-exponent = <2>;
+    time-to-max-speed-ms = <250>;
+    acceleration-exponent = <1>;
 };
 
 / {
