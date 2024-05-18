@@ -99,10 +99,10 @@
 
         default_windows {
             bindings = <
-&trans  &td_qq  &kp W  &kp E    &kp R            &kp T                    &kp Y    &kp U  &kp I                 &kp O    &kp SINGLE_QUOTE  &trans
-&trans  &kp A   &kp S  &kp D    &kp F            &kp G                    &kp H    &kp J  &kp K                 &kp L    &kp P             &trans
-&trans  &kp Z   &kp X  &kp C    &kp V            &kp B                    &kp N    &kp M  &com_wind LWIN COMMA  &kp DOT  &kp FSLH          &trans
-                       &kp TAB  &lt 2 BACKSPACE  &bsp_ctrl LCTRL SPACE    &td_sec  &to 3  &kp RIGHT_ALT
+&trans  &td_qq  &kp W  &kp E    &kp R            &kp T                    &kp Y                  &kp U  &kp I                 &kp O    &kp SINGLE_QUOTE  &trans
+&trans  &kp A   &kp S  &kp D    &kp F            &kp G                    &kp H                  &kp J  &kp K                 &kp L    &kp P             &trans
+&trans  &kp Z   &kp X  &kp C    &kp V            &kp B                    &kp N                  &kp M  &com_wind LWIN COMMA  &kp DOT  &kp FSLH          &trans
+                       &kp TAB  &lt 2 BACKSPACE  &bsp_ctrl LCTRL SPACE    &mt RIGHT_SHIFT ENTER  &to 3  &kp RIGHT_ALT
             >;
         };
 
