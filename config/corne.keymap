@@ -158,10 +158,10 @@
 
         symbols {
             bindings = <
-&none  &kp BACKSLASH  &kp PIPE     &kp SLASH             &kp LESS_THAN          &kp GREATER_THAN     &none   &none            &none              &none         &none         &none
-&none  &kp SEMI       &kp MINUS    &kp EQUAL             &kp LEFT_BRACE         &kp RIGHT_BRACE      &none   &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &none
-&none  &kp GRAVE      &kp PERCENT  &kp AMPERSAND         &kp LEFT_BRACKET       &kp RIGHT_BRACKET    &none   &none            &none              &none         &none         &none
-                                   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL            &trans  &none            &none
+&none  &kp EXCLAMATION  &kp BACKSLASH  &kp ASTRK             &kp LESS_THAN          &kp GREATER_THAN     &none   &none            &none              &none         &none         &none
+&none  &kp SEMI         &kp MINUS      &kp EQUAL             &kp LEFT_BRACE         &kp RIGHT_BRACE      &none   &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &none
+&none  &kp GRAVE        &kp PERCENT    &kp AMPERSAND         &kp LEFT_BRACKET       &kp RIGHT_BRACKET    &none   &none            &none              &none         &none         &none
+                                       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL            &trans  &none            &none
             >;
         };
 
