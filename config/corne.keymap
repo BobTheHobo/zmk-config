@@ -148,10 +148,10 @@
 
         Nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &kp LC(R)     &kp LC(V)      &kp LC(C)      &kp LC(X)    &kp LC(Z)  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp CAPSLOCK  &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &kp INSERT    &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
+                            &trans     &trans     &trans    &kp RETURN    &kp BACKSPACE  &kp DELETE
             >;
         };
 
