@@ -170,6 +170,7 @@
         compatible = "zmk,keymap";
 
         Base {
+            display-name = "Base";
             bindings = <
 &trans  &kp Q            &kp W            &kp E                &kp R              &kp T        &kp Y        &kp U               &kp I                 &kp O             &kp SINGLE_QUOTE  &trans
 &trans  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G        &kp H        &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr LEFT_GUI P   &trans
@@ -179,6 +180,7 @@
         };
 
         Media {
+            display-name = "Media";
             bindings = <
 &trans  &trans    &trans    &trans     &trans     &trans    &bl BL_TOG  &bl BL_DEC        &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bl BL_INC  &trans
 &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans      &kp C_PREVIOUS    &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_NEXT  &trans
@@ -188,6 +190,7 @@
         };
 
         Nav {
+            display-name = "Nav";
             bindings = <
 &trans  &trans    &trans    &trans     &trans     &trans    &kp LC(R)     &kp LC(V)      &kp LC(C)      &kp LC(X)    &kp LC(Z)  &trans
 &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp CAPSLOCK  &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
@@ -197,6 +200,7 @@
         };
 
         Mouse {
+            display-name = "Mouse";
             bindings = <
 &trans  &trans    &trans    &trans     &trans     &trans    &kp LC(R)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)        &trans
 &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
@@ -206,6 +210,7 @@
         };
 
         Sym {
+            display-name = "Symbol";
             bindings = <
 &trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &trans  &trans           &trans     &trans    &trans    &trans
 &trans  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS           &trans  &kp RIGHT_SHIFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
@@ -215,6 +220,7 @@
         };
 
         Num {
+            display-name = "Number";
             bindings = <
 &trans  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
@@ -224,6 +230,7 @@
         };
 
         Fun {
+            display-name = "Function";
             bindings = <
 &trans  &kp F12  &kp F7  &kp F8      &kp F9     &kp PRINTSCREEN    &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &kp F11  &kp F4  &kp F5      &kp F6     &kp SCROLLLOCK     &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
@@ -233,6 +240,7 @@
         };
 
         Button {
+            display-name = "Button";
             bindings = <
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(R)    &kp LC(R)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &trans
 &trans  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans       &trans     &kp RSHFT  &kp RCTRL  &kp RALT   &kp RGUI   &trans
@@ -242,6 +250,7 @@
         };
 
         Bluetooth {
+            display-name = "Bluetooth";
             bindings = <
 &trans  &trans  &trans  &trans  &trans     &bootloader          &bt BT_DISC 4  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2   &bt BT_DISC 3  &trans
 &trans  &trans  &trans  &trans  &soft_off  &out OUT_TOG         &bt BT_SEL 4   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &trans
