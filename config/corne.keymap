@@ -30,7 +30,7 @@
         // layer switch combo
 
         combo_ls {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <36 41>;
             bindings = <&mo 8>;
         };
