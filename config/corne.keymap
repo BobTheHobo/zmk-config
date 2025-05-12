@@ -56,7 +56,9 @@
                 30 31 32 33 34 35 
                 39 40 41
             >;
- // List of keys on the right side of the keyboard
+
+            // List of keys on the right side of the keyboard
+
             hold-trigger-on-release;
         };
 
@@ -75,7 +77,9 @@
                 24 25 26 27 28 29 
                 36 37 38
             >;
- // List of keys on the left side of the keyboard
+
+            // List of keys on the left side of the keyboard
+
             hold-trigger-on-release;
         };
 
@@ -198,9 +202,9 @@
 
         Mouse {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans    &kp LC(R)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)        &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&trans  &trans    &trans    &to 3      &to 0      &trans    &mkp MB5   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &kp LC(R)  &kp LC(V)       &mmv MOVE_UP    &kp LC(X)        &kp LC(Z)        &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &mkp MB4   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LC(C)        &trans
+&trans  &trans    &trans    &to 3      &to 0      &trans    &mkp MB5   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &trans
                             &trans     &trans     &trans    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
